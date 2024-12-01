@@ -1,6 +1,6 @@
 # airflow_kafka_clickhouse_integration
 
-[link](https://github.com/Lemberg14/kafka_clickhouse_integration/blob/main/Test%20Task%20Appflame%20.pdf) to the test task
+[link](https://github.com/Lemberg14/airflow_kafka_clickhouse_integration/blob/main/appflame_data_engineer_test_task.md) to the test task
 
 Firstly we need to create docker compose file with clickhouse, ubuntu and kafka
 ```yaml

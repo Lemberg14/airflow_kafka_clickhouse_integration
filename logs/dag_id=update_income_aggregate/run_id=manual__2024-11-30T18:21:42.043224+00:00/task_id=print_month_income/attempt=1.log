@@ -1,0 +1,29 @@
+[2024-11-30T18:21:45.606+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2024-11-30T18:21:45.618+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: update_income_aggregate.print_month_income manual__2024-11-30T18:21:42.043224+00:00 [queued]>
+[2024-11-30T18:21:45.626+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: update_income_aggregate.print_month_income manual__2024-11-30T18:21:42.043224+00:00 [queued]>
+[2024-11-30T18:21:45.627+0000] {taskinstance.py:2866} INFO - Starting attempt 1 of 1
+[2024-11-30T18:21:45.634+0000] {taskinstance.py:2889} INFO - Executing <Task(PythonOperator): print_month_income> on 2024-11-30 18:21:42.043224+00:00
+[2024-11-30T18:21:45.640+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=87) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2024-11-30T18:21:45.641+0000] {standard_task_runner.py:72} INFO - Started process 88 to run task
+[2024-11-30T18:21:45.641+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'update_income_aggregate', 'print_month_income', 'manual__2024-11-30T18:21:42.043224+00:00', '--job-id', '40', '--raw', '--subdir', 'DAGS_FOLDER/test.py', '--cfg-path', '/tmp/tmpp58sa9__']
+[2024-11-30T18:21:45.642+0000] {standard_task_runner.py:105} INFO - Job 40: Subtask print_month_income
+[2024-11-30T18:21:45.676+0000] {task_command.py:467} INFO - Running <TaskInstance: update_income_aggregate.print_month_income manual__2024-11-30T18:21:42.043224+00:00 [running]> on host 66a40688d358
+[2024-11-30T18:21:45.864+0000] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='update_income_aggregate' AIRFLOW_CTX_TASK_ID='print_month_income' AIRFLOW_CTX_EXECUTION_DATE='2024-11-30T18:21:42.043224+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-11-30T18:21:42.043224+00:00'
+[2024-11-30T18:21:45.868+0000] {logging_mixin.py:190} INFO - Task instance is in running state
+[2024-11-30T18:21:45.868+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: queued
+[2024-11-30T18:21:45.868+0000] {logging_mixin.py:190} INFO - Current task name:print_month_income state:running start_date:2024-11-30 18:21:45.618888+00:00
+[2024-11-30T18:21:45.870+0000] {logging_mixin.py:190} INFO - Dag name:update_income_aggregate and current dag run status:running
+[2024-11-30T18:21:45.870+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2024-11-30T18:21:45.877+0000] {logging_mixin.py:190} INFO - [[datetime.datetime(2024, 11, 30, 18, 21, 44)]]
+[2024-11-30T18:21:45.877+0000] {python.py:240} INFO - Done. Returned value was: None
+[2024-11-30T18:21:45.881+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2024-11-30T18:21:45.881+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=update_income_aggregate, task_id=print_month_income, run_id=manual__2024-11-30T18:21:42.043224+00:00, execution_date=20241130T182142, start_date=20241130T182145, end_date=20241130T182145
+[2024-11-30T18:21:45.884+0000] {logging_mixin.py:190} INFO - Task instance in success state
+[2024-11-30T18:21:45.884+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: running
+[2024-11-30T18:21:45.885+0000] {logging_mixin.py:190} INFO - Dag name:update_income_aggregate queued_at:2024-11-30 18:21:42.061391+00:00
+[2024-11-30T18:21:45.885+0000] {logging_mixin.py:190} INFO - Task hostname:66a40688d358 operator:PythonOperator
+[2024-11-30T18:21:45.905+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2024-11-30T18:21:45.912+0000] {taskinstance.py:3895} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-11-30T18:21:45.912+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

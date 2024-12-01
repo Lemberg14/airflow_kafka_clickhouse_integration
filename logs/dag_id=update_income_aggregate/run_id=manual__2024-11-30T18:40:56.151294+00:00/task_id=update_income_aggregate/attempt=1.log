@@ -1,0 +1,29 @@
+[2024-11-30T18:40:57.957+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2024-11-30T18:40:57.989+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: update_income_aggregate.update_income_aggregate manual__2024-11-30T18:40:56.151294+00:00 [queued]>
+[2024-11-30T18:40:57.998+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: update_income_aggregate.update_income_aggregate manual__2024-11-30T18:40:56.151294+00:00 [queued]>
+[2024-11-30T18:40:57.998+0000] {taskinstance.py:2866} INFO - Starting attempt 1 of 1
+[2024-11-30T18:40:58.008+0000] {taskinstance.py:2889} INFO - Executing <Task(ClickHouseOperator): update_income_aggregate> on 2024-11-30 18:40:56.151294+00:00
+[2024-11-30T18:40:58.015+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=76) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2024-11-30T18:40:58.016+0000] {standard_task_runner.py:72} INFO - Started process 77 to run task
+[2024-11-30T18:40:58.016+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'update_income_aggregate', 'update_income_aggregate', 'manual__2024-11-30T18:40:56.151294+00:00', '--job-id', '49', '--raw', '--subdir', 'DAGS_FOLDER/test.py', '--cfg-path', '/tmp/tmponya9dyr']
+[2024-11-30T18:40:58.017+0000] {standard_task_runner.py:105} INFO - Job 49: Subtask update_income_aggregate
+[2024-11-30T18:40:58.055+0000] {task_command.py:467} INFO - Running <TaskInstance: update_income_aggregate.update_income_aggregate manual__2024-11-30T18:40:56.151294+00:00 [running]> on host 66a40688d358
+[2024-11-30T18:40:58.375+0000] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='update_income_aggregate' AIRFLOW_CTX_TASK_ID='update_income_aggregate' AIRFLOW_CTX_EXECUTION_DATE='2024-11-30T18:40:56.151294+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-11-30T18:40:56.151294+00:00'
+[2024-11-30T18:40:58.377+0000] {logging_mixin.py:190} INFO - Task instance is in running state
+[2024-11-30T18:40:58.377+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: queued
+[2024-11-30T18:40:58.379+0000] {logging_mixin.py:190} INFO - Current task name:update_income_aggregate state:running start_date:2024-11-30 18:40:57.990870+00:00
+[2024-11-30T18:40:58.380+0000] {logging_mixin.py:190} INFO - Dag name:update_income_aggregate and current dag run status:running
+[2024-11-30T18:40:58.380+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2024-11-30T18:40:58.391+0000] {base.py:84} INFO - Retrieving connection 'clickhouse_test'
+[2024-11-30T18:40:58.392+0000] {clickhouse.py:79} INFO - SELECT toDate(FROM_UNIXTIME(ts)) AS date, operation, count() AS count FROM events GROUP BY date, operation
+[2024-11-30T18:40:58.460+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2024-11-30T18:40:58.461+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=update_income_aggregate, task_id=update_income_aggregate, run_id=manual__2024-11-30T18:40:56.151294+00:00, execution_date=20241130T184056, start_date=20241130T184057, end_date=20241130T184058
+[2024-11-30T18:40:58.470+0000] {logging_mixin.py:190} INFO - Task instance in success state
+[2024-11-30T18:40:58.470+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: running
+[2024-11-30T18:40:58.471+0000] {logging_mixin.py:190} INFO - Dag name:update_income_aggregate queued_at:2024-11-30 18:40:56.187134+00:00
+[2024-11-30T18:40:58.471+0000] {logging_mixin.py:190} INFO - Task hostname:66a40688d358 operator:ClickHouseOperator
+[2024-11-30T18:40:58.491+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2024-11-30T18:40:58.520+0000] {taskinstance.py:3895} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2024-11-30T18:40:58.523+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
